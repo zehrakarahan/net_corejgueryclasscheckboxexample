@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<button id="tiklanmasigereken">Yeni Tiklama </button>
+<div class="denemedeneme">
+    <label>
+      @*  <input type="checkbox"  />*@
+        <input value="denemetest" id="gelenveri" type="text" />
+        <input type="checkbox" />
+        <input type="checkbox"  id="deneme"/>
+    </label>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $("#tiklanmasigereken").click(function () {
+
+        console.log($(".denemedeneme").find("input[id=gelenveri]").val());
+       var sonuc=$(".denemedeneme>label>input[type=text]").val();
+        console.log("zehra " + sonuc);
+        //var sonuc2 = $(".denemedeneme>label>input[type=checkbox]").val();
+        var sonuc3 = $('.denemedeneme>label>input[type=checkbox]').is(':checked');
+        console.log("dene " + sonuc3);
+    });
+   // var $boxes = $('.denemedeneme>label>input[id=deneme]:checked');
+    var check;
+    $(".denemedeneme>label>input[id=deneme]").on("click", function () {
+        check = $(".denemedeneme>label>input[id=deneme]").prop("checked");
+        console.log(check);
+     
+    });
+</script>
