@@ -13,6 +13,7 @@
         <input value="denemetest" id="gelenveri" type="text" />
         <input type="checkbox" />
         <input type="checkbox"  id="deneme"/>
+        <input type="checkbox" id="testtest"  onclick="TestTiklama(this)" />
     </label>
 </div>
 
@@ -34,4 +35,9 @@
         console.log(check);
      
     });
+    function TestTiklama(test) {
+        var sonuc4 = $('.denemedeneme>label>input[id=testtest]').is(':checked');
+        console.log(sonuc4);
+        console.log("tikland");
+    }
 </script>
